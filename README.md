@@ -25,7 +25,10 @@ or
 
 If you've already verified that all tests pass.
 
-### Schema Used
+### MySQL Schema Used
+
+There is a db_create.sh file in resources that will create a log_parser Database, assuming the presence of a parseruser account.
+
 ```SQL
 USE log_parser;
 CREATE TABLE log_record(id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT, log_date DATETIME, ip_address varchar(15), request varchar(1024), status smallint, user_agent varchar(1024));
