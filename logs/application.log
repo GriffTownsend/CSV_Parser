@@ -1,0 +1,2 @@
+2018-08-27 23:32:17,273 ERROR o.h.e.j.s.SqlExceptionHelper [main] Unknown column 'ipAddress' in 'field list'
+2018-08-27 23:35:30,322 ERROR o.h.e.j.s.SqlExceptionHelper [main] Unknown column 'ipAddress' in 'field list'
