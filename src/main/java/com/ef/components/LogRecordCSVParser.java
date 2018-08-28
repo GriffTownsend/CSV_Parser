@@ -34,8 +34,6 @@ import java.util.List;
 @Component
 public class LogRecordCSVParser {
 
-	private static final String[] DATE_PATTERNS={DateFormatUtils.ISO_8601_EXTENDED_DATETIME_TIME_ZONE_FORMAT.getPattern(), "yyyy-MM-dd'T'HH:mm:ss'Z'", DateFormatUtils.ISO_8601_EXTENDED_DATETIME_FORMAT.getPattern(), DateFormatUtils.ISO_8601_EXTENDED_DATE_FORMAT.getPattern(), "yyyy-MM-dd", "yyyy-MM-dd HH:mm:ss"};
-
 	@Resource
 	private LogRecordRepository recordRepository;
 
@@ -57,7 +55,7 @@ public class LogRecordCSVParser {
 		}
 	}
 
-	public void importCSVFile(InputStream is) throws SQLException, IOException {
+	public void importCSVFile(InputStream is) throws IOException {
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 			 CSVParser parser = new CSVParser(reader, CSVFormat.DEFAULT
 					 .withHeader("date", "ipAddress", "request", "status","userAgent").withSkipHeaderRecord(false).withTrim().withDelimiter('|')
