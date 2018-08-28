@@ -14,6 +14,17 @@ If no access log is provided, a sample file included in the project will be used
 A simplified date parser for variations on the ISO provided date is included. Date pattern recognition would be much more thorough in a production environment. 
 
 
+### Build Instructions
+Sample uses Maven for component management and build. To compile use:
+
+`mvn clean install`
+
+or
+
+`mvn clean install -DskipTests=true`
+
+If you've already verified that all tests pass.
+
 ### Schema Used
 ```SQL
 USE log_parser;
